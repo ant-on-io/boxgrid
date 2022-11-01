@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>boxgrid demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"/>
+    <link rel="stylesheet" href="boxgrid.css"/>
+    <style>
+      :root {
+        font-family: 'Source Sans Pro', sans-serif;
+        background-color: antiquewhite;
+      }
+      pre {
+        font-family: 'Source Code Pro', monospace;
+        background: darkslategrey;
+        color: white;
+        padding: 0.5rem;
+      }
+      div.row {
+        margin-bottom: 0.25rem;
+      }
+      div.row > div {
+        background-color: lightsalmon;
+        height: 4rem;
+        padding: 0.25rem;
+      }
+      div.row > div.blank {
+        background-color: transparent;
+      }
+      summary {
+        color: darkslategrey;
+        cursor: Pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>boxgrid.css</h1>
+    <h2>Equal rows</h2>
+    <div class="row c3">
+      <div>first column</div>
+      <div>second column</div>
+      <div>third column</div>
+    </div>
+    <details>
+      <summary>code</summary>
+      <pre>
+&lt;div class="row c3">
+  &lt;div>first column&lt;/div>
+  &lt;div>second column&lt;/div>
+  &lt;div>third column&lt;/div>
+&lt;/div></pre>
+    </details>
+    <h2>Twelve-column layout</h2>
+    <div class="row">
+      <div class="col-4">four-wide</div>
+      <div class="col-6">six-wide</div>
+      <div class="col-2">two-wide</div>
+    </div>
+    <div class="row">
+      <div class="col-4">four</div>
+      <div class="col-8">eight</div>
+    </div>
+    <div class="row">
+      <div class="col-1">one</div>
+      <div class="col-10">ten</div>
+      <div class="col-1">one</div>
+    </div>
+    <div class="row">
+      <div class="col-1">one</div>
+      <div class="col-3 blank"></div>
+      <div class="col-7">seven</div>
+      <div class="col-1">one</div>
+    </div>
+    <details>
+      <summary>code</summary>
+      <pre>
+&lt;div class="row">
+  &lt;div class="col-4">four-wide&lt;/div>
+  &lt;div class="col-6">six-wide&lt;/div>
+  &lt;div class="col-2">two-wide&lt;/div>
+&lt;/div>
+...</pre>
+    </details>
+  </body>
+</html>
