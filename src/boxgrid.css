@@ -1,0 +1,45 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.25rem;
+}
+
+.row.c1  { grid-template-columns: 1fr; }
+.row.c2  { grid-template-columns: repeat(2,  1fr); }
+.row.c3  { grid-template-columns: repeat(3,  1fr); }
+.row.c4  { grid-template-columns: repeat(4,  1fr); }
+.row.c5  { grid-template-columns: repeat(5,  1fr); }
+.row.c6  { grid-template-columns: repeat(6,  1fr); }
+.row.c7  { grid-template-columns: repeat(7,  1fr); }
+.row.c8  { grid-template-columns: repeat(8,  1fr); }
+.row.c9  { grid-template-columns: repeat(9,  1fr); }
+.row.c10 { grid-template-columns: repeat(10, 1fr); }
+.row.c11 { grid-template-columns: repeat(11, 1fr); }
+.row.c12 { grid-template-columns: repeat(12, 1fr); } /* default */
+
+.row.g0  { gap: 0; }
+.row.g1  { gap: 0.25rem; } /* default */
+.row.g2  { gap: 0.50rem; }
+.row.g3  { gap: 0.75rem; }
+.row.g4  { gap: 1.00rem; }
+.row.g5  { gap: 1.25rem; }
+.row.g6  { gap: 1.50rem; }
+.row.g7  { gap: 1.75rem; }
+.row.g8  { gap: 2.00rem; }
+.row.g9  { gap: 2.25rem; }
+.row.g10 { gap: 2.50rem; }
+.row.g11 { gap: 2.75rem; }
+.row.g12 { gap: 3.00rem; }
+
+.row  > .col-1  { grid-column: span 1;  } /* default */
+.row  > .col-2  { grid-column: span 2;  }
+.row  > .col-3  { grid-column: span 3;  }
+.row  > .col-4  { grid-column: span 4;  }
+.row  > .col-5  { grid-column: span 5;  }
+.row  > .col-6  { grid-column: span 6;  }
+.row  > .col-7  { grid-column: span 7;  }
+.row  > .col-8  { grid-column: span 8;  }
+.row  > .col-9  { grid-column: span 9;  }
+.row  > .col-10 { grid-column: span 10; }
+.row  > .col-11 { grid-column: span 11; }
+.row  > .col-12 { grid-column: span 12; }
