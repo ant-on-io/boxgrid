@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0.25rem;
+  margin-bottom: 0.25rem;
 
   &.c1  { grid-template-columns: 1fr; }
   &.c2  { grid-template-columns: repeat(2,  1fr); }
@@ -16,19 +17,19 @@
   &.c11 { grid-template-columns: repeat(11, 1fr); }
   &.c12 { grid-template-columns: repeat(12, 1fr); } // default
 
-  &.g0  { gap: 0; }
-  &.g1  { gap: 0.25rem; } // default
-  &.g2  { gap: 0.50rem; }
-  &.g3  { gap: 0.75rem; }
-  &.g4  { gap: 1.00rem; }
-  &.g5  { gap: 1.25rem; }
-  &.g6  { gap: 1.50rem; }
-  &.g7  { gap: 1.75rem; }
-  &.g8  { gap: 2.00rem; }
-  &.g9  { gap: 2.25rem; }
-  &.g10 { gap: 2.50rem; }
-  &.g11 { gap: 2.75rem; }
-  &.g12 { gap: 3.00rem; }
+  &.g0  { gap: 0;       margin-bottom: 0;       }
+  &.g1  { gap: 0.25rem; margin-bottom: 0.25rem; } // default
+  &.g2  { gap: 0.50rem; margin-bottom: 0.50rem; }
+  &.g3  { gap: 0.75rem; margin-bottom: 0.75rem; }
+  &.g4  { gap: 1.00rem; margin-bottom: 1.00rem; }
+  &.g5  { gap: 1.25rem; margin-bottom: 1.25rem; }
+  &.g6  { gap: 1.50rem; margin-bottom: 1.50rem; }
+  &.g7  { gap: 1.75rem; margin-bottom: 1.75rem; }
+  &.g8  { gap: 2.00rem; margin-bottom: 2.00rem; }
+  &.g9  { gap: 2.25rem; margin-bottom: 2.25rem; }
+  &.g10 { gap: 2.50rem; margin-bottom: 2.50rem; }
+  &.g11 { gap: 2.75rem; margin-bottom: 2.75rem; }
+  &.g12 { gap: 3.00rem; margin-bottom: 3.00rem; }
 
   > .col-1  { grid-column: span 1;  } // default
   > .col-2  { grid-column: span 2;  }
