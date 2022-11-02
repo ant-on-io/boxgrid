@@ -4,7 +4,7 @@ A really simple CSS grid layout. I wanted this to be as simple as possible. Usin
 
 ## Demo
 
-...
+https://ant-on-io.github.io/boxgrid/
 
 ## Setup
 

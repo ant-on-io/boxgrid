@@ -1,0 +1,55 @@
+:root {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: antiquewhite;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 1rem;
+  color: lightsalmon;
+}
+
+a {
+  text-decoration: none;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.row > div {
+  background-color: lightsalmon;
+  height: 4rem;
+  padding: 0.25rem;
+}
+
+div.row > div.blank {
+  background-color: transparent;
+}
+
+summary {
+  color: darkslategrey;
+  cursor: Pointer;
+}
+
+pre {
+  font-family: 'Source Code Pro', monospace;
+  background-color: darkslategrey;
+  color: white;
+  padding: 0.5rem;
+}
+
+pre span {
+  color: lightgreen;
+}
+
+form {
+  max-width: 36rem;
+}
+
+form > input,
+form > button {
+  padding: 0.2rem;
+}
