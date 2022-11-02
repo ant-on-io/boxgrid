@@ -11,7 +11,7 @@ https://ant-on-io.github.io/boxgrid/
 Copy the `boxgrid.css` into your project and load it in your html:
 
 ```html
-<link rel="stylesheet" href="/css/boxgrid.css"/>
+<link rel="stylesheet" href="boxgrid.css"/>
 
 ```
 The base class for the grid system is `row`. There are two ways of adding columns to a row:
