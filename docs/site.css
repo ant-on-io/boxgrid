@@ -45,6 +45,10 @@ pre {
   padding: 1rem;
 }
 
+pre b {
+  color: gold;
+}
+
 pre span {
   color: lightgreen;
 }
