@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"/>
     <link rel="stylesheet" href="site.css"/>
     <link rel="stylesheet" href="boxgrid.css"/>
   </head>
@@ -14,7 +14,7 @@
     <h1>boxgrid.css</h1>
     <div class="intro">
       <p>A very simple CSS grid layout system!</p>
-      <p><a href="https://github.com/ant-on-io/boxgrid">GitHub</a></p>
+      <p>get it at <a href="https://github.com/ant-on-io/boxgrid">GitHub</a></p>
     </div>
 
     <h2>Equal columns</h2>
@@ -26,7 +26,7 @@
     <details>
       <summary>code</summary>
       <pre>
-&lt;div class="<b>row c3</b>"> <span>&lt;!-- c3 = three columns --></span>
+&lt;div class="<b>row c3</b>"> <i>&lt;!-- c3 = three columns --></i>
   &lt;div>first column&lt;/div>
   &lt;div>second column&lt;/div>
   &lt;div>third column&lt;/div>
@@ -59,7 +59,7 @@
   &lt;div class="<b>col-2</b>">two-wide&lt;/div>
 &lt;/div>
 &lt;div class="<b>row</b>">
-  <span>&lt;!-- a row div can contain more than one row: --></span>
+  <i>&lt;!-- a row div can contain more than one row: --></i>
   &lt;div class="<b>col-4</b>">four&lt;/div>
   &lt;div class="<b>col-8</b>">eight&lt;/div>
   &lt;div class="<b>col-1</b>">one&lt;/div>
@@ -73,7 +73,7 @@
     </details>
 
     <h2>Forms</h2>
-    <form class="row">
+    <form class="row" onsubmit="return false">
       <input type="text" class="col-6" name="firstName" placeholder="first name"/>
       <input type="text" class="col-6" name="lastName" placeholder="last name"/>
       <input type="text" class="col-10" name="street" placeholder="street"/>
@@ -96,6 +96,30 @@
   &lt;button type="submit" class="<b>col-3</b>">Save&lt;/button>
   &lt;button type="button" class="<b>col-3</b>">Cancel&lt;/button>
 &lt;/form></pre>
+    </details>
+
+    <h2>Nested grids</h2>
+    <div class="row">
+      <div class="col-2">left</div>
+      <div class="col-8 row c3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="col-2">right</div>
+    </div>
+    <details>
+      <summary>code</summary>
+      <pre>
+&lt;div class="<b>row</b>">
+  &lt;div class="col-2">left&lt;/div>
+  &lt;div class="<b>col-8 row c3</b>">
+    &lt;div>1&lt;/div>
+    &lt;div>2&lt;/div>
+    &lt;div>3&lt;/div>
+  &lt;/div>
+  &lt;div class="col-2">right&lt;/div>
+&lt;/div></pre>
     </details>
 
   </body>

@@ -15,7 +15,13 @@ h1 {
 }
 
 a {
+  color: cornflowerblue;
   text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 1px 1px 8px #000000aa;
 }
 
 .intro {
@@ -25,12 +31,21 @@ a {
 
 div.row > div {
   background-color: tan;
-  height: 4rem;
+  height: 5rem;
   padding: 0.25rem;
 }
 
 div.row > div.blank {
   background-color: transparent;
+}
+
+div.row > div.row { /* nested row */
+  background-color: transparent;
+  padding: 0;
+}
+
+div.row > div.row > div { /* nested column */
+  opacity: 0.66;
 }
 
 summary {
@@ -41,6 +56,8 @@ summary {
 pre {
   font-family: 'Source Code Pro', monospace;
   background-color: darkslategrey;
+  border: solid 1px black;
+  box-shadow: 0 2px 8px #000000ff;
   color: white;
   padding: 1rem;
 }
@@ -49,15 +66,34 @@ pre b {
   color: gold;
 }
 
-pre span {
-  color: lightgreen;
+pre i {
+  color: mediumseagreen;
 }
 
 form {
-  max-width: 36rem;
+  background-color: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 2px 8px #00000044;
+  padding: 1rem;
+  max-width: 40rem;
 }
 
 form > input,
 form > button {
-  padding: 0.2rem;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
 }
+
+form > input {
+  background-color: whitesmoke;
+  border: solid 1px grey;
+}
+
+form > button {
+  background-color: rgb(176, 196, 222, 0.5);
+  border: none;
+}
+
+form > button:hover {
+  background-color: rgb(176, 196, 222, 1.0);
+}
+
