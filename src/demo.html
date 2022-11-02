@@ -34,10 +34,18 @@
         color: darkslategrey;
         cursor: Pointer;
       }
+      form {
+        max-width: 36rem;
+      }
+      form > input,
+      form > button {
+        padding: 0.2rem;
+      }
     </style>
   </head>
   <body>
     <h1>boxgrid.css</h1>
+
     <h2>Equal columns</h2>
     <div class="row c3">
       <div>first column</div>
@@ -53,6 +61,7 @@
   &lt;div>third column&lt;/div>
 &lt;/div></pre>
     </details>
+
     <h2>Twelve-column layout</h2>
     <div class="row">
       <div class="col-4">four-wide</div>
@@ -91,5 +100,18 @@
   &lt;div class="col-1">one&lt;/div>
 &lt;/div></pre>
     </details>
+
+    <h2>Forms</h2>
+    <form class="row">
+      <input type="text" class="col-6" name="firstName" placeholder="first name"/>
+      <input type="text" class="col-6" name="lastName" placeholder="last name"/>
+      <input type="text" class="col-10" name="street" placeholder="street"/>
+      <input type="text" class="col-2" name="number" placeholder="number"/>
+      <input type="text" class="col-3" name="zip" placeholder="zip code"/>
+      <input type="text" class="col-9" name="city" placeholder="city"/>
+      <button type="submit" class="col-3">Save</button>
+      <button type="button" class="col-3">Cancel</button>
+    </form>
+
   </body>
 </html>
