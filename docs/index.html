@@ -18,7 +18,7 @@
     </div>
 
     <h2>Equal columns</h2>
-    <div class="row c3">
+    <div class="row c3"> <!-- c3 = three columns -->
       <div>first column</div>
       <div>second column</div>
       <div>third column</div>
@@ -40,6 +40,7 @@
       <div class="col-2">two-wide</div>
     </div>
     <div class="row">
+      <!-- a row div can contain more than one row: -->
       <div class="col-4">four</div>
       <div class="col-8">eight</div>
       <div class="col-1">one</div>
@@ -101,10 +102,13 @@
     <h2>Nested grids</h2>
     <div class="row">
       <div class="col-2">left</div>
-      <div class="col-8 row c3">
+      <div class="col-8 row c3"> <!-- nested -->
         <div>1</div>
         <div>2</div>
-        <div>3</div>
+        <div class="row"> <!-- nested -->
+          <div class="col-4">3.1</div>
+          <div class="col-8">3.2</div>
+        </div>
       </div>
       <div class="col-2">right</div>
     </div>
@@ -113,10 +117,13 @@
       <pre>
 &lt;div class="<b>row</b>">
   &lt;div class="col-2">left&lt;/div>
-  &lt;div class="<b>col-8 row c3</b>">
+  &lt;div class="<b>col-8 row c3</b>"> <i>&lt;!-- nested --></i>
     &lt;div>1&lt;/div>
     &lt;div>2&lt;/div>
-    &lt;div>3&lt;/div>
+    &lt;div class="<b>row</b>"> <i>&lt;!-- nested --></i>
+      &lt;div class="col-4">3.1&lt;/div>
+      &lt;div class="col-8">3.2&lt;/div>
+    &lt;/div>
   &lt;/div>
   &lt;div class="col-2">right&lt;/div>
 &lt;/div></pre>

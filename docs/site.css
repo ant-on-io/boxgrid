@@ -10,7 +10,7 @@ body {
 h1 {
   text-align: center;
   font-size: 4rem;
-  margin-top: 1rem;
+  margin: 1rem;
   color: tan;
 }
 
@@ -46,6 +46,10 @@ div.row > div.row { /* nested row */
 
 div.row > div.row > div { /* nested column */
   opacity: 0.66;
+}
+
+div.row > div.row > div.row > div { /* double nested column */
+  opacity: 0.55;
 }
 
 summary {
@@ -91,6 +95,8 @@ form > input {
 form > button {
   background-color: #b0c4de80;
   border: solid 1px #b0c4de;
+  color: navy;
+  cursor: pointer;
 }
 
 form > button:hover {
