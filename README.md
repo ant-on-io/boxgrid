@@ -56,7 +56,7 @@ If a column needs to start at a particular location, simply insert an empty div 
 ```html
 <div class="row">
   <div class="col-5">first</div>
-  <div class="col-2"></div>
+  <div class="col-2"></div> <!-- empty space -->
   <div class="col-5">second</div>
 </div>
 ```
