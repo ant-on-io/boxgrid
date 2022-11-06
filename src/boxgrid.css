@@ -17,6 +17,10 @@
 .row.c10 { grid-template-columns: repeat(10, 1fr); }
 .row.c11 { grid-template-columns: repeat(11, 1fr); }
 .row.c12 { grid-template-columns: repeat(12, 1fr); } /* default */
+.row.c13 { grid-template-columns: repeat(13, 1fr); }
+.row.c14 { grid-template-columns: repeat(14, 1fr); }
+.row.c15 { grid-template-columns: repeat(15, 1fr); }
+.row.c16 { grid-template-columns: repeat(16, 1fr); }
 
 .row.g0  { gap: 0;       margin-bottom: 0;       }
 .row.g1  { gap: 0.25rem; margin-bottom: 0.25rem; } /* default */
@@ -31,6 +35,10 @@
 .row.g10 { gap: 2.50rem; margin-bottom: 2.50rem; }
 .row.g11 { gap: 2.75rem; margin-bottom: 2.75rem; }
 .row.g12 { gap: 3.00rem; margin-bottom: 3.00rem; }
+.row.g13 { gap: 3.25rem; margin-bottom: 3.25rem; }
+.row.g14 { gap: 3.50rem; margin-bottom: 3.50rem; }
+.row.g15 { gap: 3.75rem; margin-bottom: 3.75rem; }
+.row.g16 { gap: 4.00rem; margin-bottom: 4.00rem; }
 
 .row  > .col-1  { grid-column: span 1;  } /* default */
 .row  > .col-2  { grid-column: span 2;  }
@@ -44,3 +52,7 @@
 .row  > .col-10 { grid-column: span 10; }
 .row  > .col-11 { grid-column: span 11; }
 .row  > .col-12 { grid-column: span 12; }
+.row  > .col-13 { grid-column: span 13; }
+.row  > .col-14 { grid-column: span 14; }
+.row  > .col-15 { grid-column: span 15; }
+.row  > .col-16 { grid-column: span 16; }

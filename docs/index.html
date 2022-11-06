@@ -17,6 +17,7 @@
       <p>get it at <a href="https://github.com/ant-on-io/boxgrid">GitHub</a></p>
     </div>
 
+    <h2>Base grid: twelve columns</h2>
     <p>Add <code>class="<b>row</b>"</code> to any element to turn it into a 12-column grid container:</p>
     <div class="row">
       <div>1</div>
@@ -44,11 +45,11 @@
 &lt;/div></pre>
     </details>
 
-    <h2>Any number of columns between 1 and 12</h2>
+    <h2>Any number of columns between 1 and 16</h2>
     <p>
       Use <code>class="<b>row c3</b>"</code> for three columns.
       Or <code><b>c5</b></code> for five columns.
-      Anything up to <code><b>c12</b></code> (which is the default so can be omitted)
+      Anything up to <code><b>c16</b></code>.
     </p>
     <div class="row c3"> <!-- c3 = three columns -->
       <div>first column</div>
@@ -68,7 +69,7 @@
     <h2>Span columns</h2>
     <p>
       You can add more children to the grid container, they will keep following the grid.
-      To span more than one column, use <code><b>col-2</b></code> to <code><b>col-12</b></code>.
+      To span more than one column, use <code><b>col-2</b></code> to <code><b>col-16</b></code>.
       For example <code>class="<b>col-2</b>"</code> for a two column span:
     </p>
     <div class="row c3">
@@ -148,8 +149,11 @@
     </details>
 
     <h2>Gap between columns and rows</h2>
-    <p>The default gap is 0.25rem wide. For a different gap use <code><b>g0</b></code> (no gap) up to <code><b>g12</b></code> (3rem). Use <code>class="<b>g4</b>"</code> for a 1rem gap:</p>
-    <div class="row g4"> <!-- g4 = 1rem -->
+    <p>
+      The default gap is 0.25rem wide.
+      For a different gap use <code><b>g0</b></code> (no gap) up to <code><b>g16</b></code> (4rem).
+      Use <code>class="<b>g4</b>"</code> for a 1rem gap:</p>
+    <div class="row g4"> <!-- g4 = 1rem gap -->
       <div class="col-5">1</div>
       <div class="col-3">2</div>
       <div class="col-4">3</div>
@@ -159,7 +163,7 @@
     <details>
       <summary>code</summary>
       <pre>
-&lt;div class="row <b>g4</b>"> <i>&lt;!-- g4 = 1rem --></i>
+&lt;div class="row <b>g4</b>"> <i>&lt;!-- g4 = 1rem gap --></i>
   &lt;div class="col-5">1&lt;/div>
   &lt;div class="col-3">2&lt;/div>
   &lt;div class="col-4">3&lt;/div>
