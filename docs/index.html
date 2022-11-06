@@ -17,13 +17,45 @@
       <p>get it at <a href="https://github.com/ant-on-io/boxgrid">GitHub</a></p>
     </div>
 
-    <h2>Equal columns</h2>
+    <p>Add <code>class="<b>row</b>"</code> to any element to turn it into a 12-column grid container:</p>
+    <div class="row">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <details open>
+      <summary>code</summary>
+      <pre>
+&lt;div class="<b>row</b>">
+  &lt;div>1&lt;/div>
+  &lt;div>2&lt;/div>
+  &lt;div>3&lt;/div>
+  <i>...</i>
+  &lt;div>12&lt;/div>
+&lt;/div></pre>
+    </details>
+
+    <h2>Any number of columns between 1 and 12</h2>
+    <p>
+      Use <code>class="<b>row c3</b>"</code> for three columns.
+      Or <code><b>c5</b></code> for five columns.
+      Anything up to <code><b>c12</b></code> (which is the default so can be omitted)
+    </p>
     <div class="row c3"> <!-- c3 = three columns -->
       <div>first column</div>
       <div>second column</div>
       <div>third column</div>
     </div>
-    <details>
+    <details open>
       <summary>code</summary>
       <pre>
 &lt;div class="<b>row c3</b>"> <i>&lt;!-- c3 = three columns --></i>
@@ -33,47 +65,63 @@
 &lt;/div></pre>
     </details>
 
-    <h2>Twelve-column layout</h2>
-    <div class="row">
-      <div class="col-4">four-wide</div>
-      <div class="col-6">six-wide</div>
-      <div class="col-2">two-wide</div>
+    <h2>Span columns</h2>
+    <p>
+      You can add more children to the grid container, they will keep following the grid.
+      To span more than one column, use <code><b>col-2</b></code> to <code><b>col-12</b></code>.
+      For example <code>class="<b>col-2</b>"</code> for a two column span:
+    </p>
+    <div class="row c3">
+      <div>first column</div>
+      <div>second column</div>
+      <div>third column</div>
+      <div class="col-2">fourth</div> <!-- col-2 = span two columns -->
+      <div>fifth</div>
     </div>
+    <details open>
+      <summary>code</summary>
+      <pre>
+&lt;div class="<b>row c3</b>">
+  &lt;div>first column&lt;/div>
+  &lt;div>second column&lt;/div>
+  &lt;div>third column&lt;/div>
+  &lt;div class="<b>col-2</b>">fourth&lt;/div> <i>&lt;!-- col-2 = span two columns --></i>
+  &lt;div>fifth&lt;/div>
+&lt;/div></pre>
+    </details>
+
+    <h2>Empty spaces</h2>
+    <p>If a column needs to start at a particular location, simply add an empty div of the desired column width:</p>
     <div class="row">
-      <!-- a row div can contain more than one row: -->
       <div class="col-4">four</div>
       <div class="col-8">eight</div>
       <div class="col-1">one</div>
       <div class="col-10">ten</div>
       <div class="col-1">one</div>
       <div class="col-1">one</div>
-      <div class="col-3 blank"></div>
+      <div class="col-3 blank"></div> <!-- empty space -->
       <div class="col-7">seven</div>
-      <div class="col-1">one</div>
     </div>
     <details>
       <summary>code</summary>
       <pre>
 &lt;div class="<b>row</b>">
-  &lt;div class="<b>col-4</b>">four-wide&lt;/div>
-  &lt;div class="<b>col-6</b>">six-wide&lt;/div>
-  &lt;div class="<b>col-2</b>">two-wide&lt;/div>
-&lt;/div>
-&lt;div class="<b>row</b>">
-  <i>&lt;!-- a row div can contain more than one row: --></i>
   &lt;div class="<b>col-4</b>">four&lt;/div>
   &lt;div class="<b>col-8</b>">eight&lt;/div>
   &lt;div class="<b>col-1</b>">one&lt;/div>
   &lt;div class="<b>col-10</b>">ten&lt;/div>
   &lt;div class="<b>col-1</b>">one&lt;/div>
   &lt;div class="<b>col-1</b>">one&lt;/div>
-  &lt;div class="<b>col-3</b> blank">&lt;/div>
+  &lt;div class="<b>col-3</b> blank">&lt;/div> <i>&lt;!-- empty space --></i>
   &lt;div class="<b>col-7</b>">seven&lt;/div>
-  &lt;div class="<b>col-1</b>">one&lt;/div>
 &lt;/div></pre>
     </details>
 
     <h2>Forms</h2>
+    <p>
+      The container element does not need to be a div.
+      You can add the row and col classes directly to a form and its inputs:
+    </p>
     <form class="row" onsubmit="return false">
       <input type="text" class="col-6" name="firstName" placeholder="first name"/>
       <input type="text" class="col-6" name="lastName" placeholder="last name"/>
@@ -97,6 +145,27 @@
   &lt;button type="submit" class="<b>col-3</b>">Save&lt;/button>
   &lt;button type="button" class="<b>col-3</b>">Cancel&lt;/button>
 &lt;/form></pre>
+    </details>
+
+    <h2>Gap between columns and rows</h2>
+    <p>The default gap is 0.25rem wide. For a different gap use <code><b>g0</b></code> (no gap) up to <code><b>g12</b></code> (3rem). Use <code>class="<b>g4</b>"</code> for a 1rem gap:</p>
+    <div class="row g4"> <!-- g4 = 1rem -->
+      <div class="col-5">1</div>
+      <div class="col-3">2</div>
+      <div class="col-4">3</div>
+      <div class="col-5">4</div>
+      <div class="col-7">5</div>
+    </div>
+    <details>
+      <summary>code</summary>
+      <pre>
+&lt;div class="row <b>g4</b>"> <i>&lt;!-- g4 = 1rem --></i>
+  &lt;div class="col-5">1&lt;/div>
+  &lt;div class="col-3">2&lt;/div>
+  &lt;div class="col-4">3&lt;/div>
+  &lt;div class="col-5">4&lt;/div>
+  &lt;div class="col-7">5&lt;/div>
+&lt;/div></pre>
     </details>
 
     <h2>Nested grids</h2>
