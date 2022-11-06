@@ -33,6 +33,8 @@ Use `class="row"` for a twelve-column grid:
   <div>12</div>
 </div>
 ```
+<img src="docs/svg/12-columns.svg" width="100%" alt="12-columns"/>
+
 
 ## Any number of columns, up to 16
 
@@ -45,6 +47,8 @@ Add `c2` class for two columns, `c3` for three columns, etc:
   <div>third column</div>
 </div>
 ```
+<img src="docs/svg/3-columns.svg" width="100%" alt="3-columns"/>
+
 ## Span columns
 
 Add column classes to the children of the `row` container.

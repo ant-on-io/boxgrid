@@ -1,0 +1,34 @@
+<svg fill="none" viewBox="0 0 400 100" width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        div.row {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 0.25rem;
+        }
+        div.row > div {
+          background-color: slategrey;
+          color: white;
+          height: 3rem;
+          padding: 0.3rem;
+          font-size: 85%;
+        }
+      </style>
+      <div class="row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
