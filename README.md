@@ -83,6 +83,16 @@ If a column needs to start at a particular location, simply insert an empty div 
 ```
 <img src="docs/svg/empty-space.svg" width="100%" alt="empty-space"/>
 
+## Automatic columns
+
+`class="row auto"` will arrange all children in equal columns:
+
+```html
+<div class="row auto"> <!-- two children, makes two columns -->
+  <div>one</div>
+  <div>two</div>
+</div>
+```
 
 ## Forms
 

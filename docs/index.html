@@ -66,9 +66,29 @@
 &lt;/div></pre>
     </details>
 
+    <h2>Automatic columns</h2>
+    <p>Add <code>class="row <b>auto</b>"</code> to arrange all children in equal columns:</p>
+    <div class="row auto"> <!-- four children, makes four columns -->
+      <div>first</div>
+      <div>second</div>
+      <div>third</div>
+      <div>fourth</div>
+    </div>
+    <details open>
+      <summary>code</summary>
+      <pre>
+&lt;div class="<b>row auto</b>"> <i>&lt;!-- four children, makes four columns --></i>
+  &lt;div>first&lt;/div>
+  &lt;div>second&lt;/div>
+  &lt;div>third&lt;/div>
+  &lt;div>fourth&lt;/div>
+&lt;/div></pre>
+    </details>
+
     <h2>Span columns</h2>
     <p>
-      You can add more children to the grid container, they will keep following the grid.
+      You can add more children to the grid container, they will keep following the grid
+      (except for <code>auto</code> rows of course).
     </p>
     <p>
       To span more than one column, use <code><b>col-2</b></code> to <code><b>col-16</b></code>.

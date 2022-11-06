@@ -22,6 +22,8 @@
 .row.c15 { grid-template-columns: repeat(15, 1fr); }
 .row.c16 { grid-template-columns: repeat(16, 1fr); }
 
+.row.auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+
 .row.g0  { gap: 0;       margin-bottom: 0;       }
 .row.g1  { gap: 0.25rem; margin-bottom: 0.25rem; } /* default */
 .row.g2  { gap: 0.50rem; margin-bottom: 0.50rem; }
