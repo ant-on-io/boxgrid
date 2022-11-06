@@ -35,7 +35,6 @@ Use `class="row"` for a twelve-column grid:
 ```
 <img src="docs/svg/12-columns.svg" width="100%" alt="12-columns"/>
 
-
 ## Any number of columns, up to 16
 
 Add `c2` class for two columns, `c3` for three columns, etc:
@@ -69,6 +68,7 @@ When more children are added, they will wrap to the next row:
   <div class="col-4">four</div>
 </div>
 ```
+<img src="docs/svg/span-columns.svg" width="100%" alt="span-columns"/>
 
 ## Empty spaces
 
@@ -81,6 +81,8 @@ If a column needs to start at a particular location, simply insert an empty div 
   <div class="col-5">second</div>
 </div>
 ```
+<img src="docs/svg/empty-space.svg" width="100%" alt="empty-space"/>
+
 
 ## Forms
 
