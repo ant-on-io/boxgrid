@@ -9,7 +9,7 @@
         }
         div.row > div {
           height: 2rem;
-          background-color: slategrey;
+          background-color: silver;
           color: white;
           padding: 0.3rem;
           font-size: 85%;
