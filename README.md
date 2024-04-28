@@ -61,7 +61,7 @@ When more children are added, they will wrap to the next row:
 
 
 ```html
-<div class="row">
+<div class="row c12">
   <!-- first row-->
   <div class="col-4">four-wide</div>
   <div class="col-8">eight-wide</div>
@@ -78,7 +78,7 @@ When more children are added, they will wrap to the next row:
 If a column needs to start at a particular location, simply insert an empty div like this:
 
 ```html
-<div class="row">
+<div class="row c12">
   <div class="col-5">first</div>
   <div class="col-2"></div> <!-- empty space -->
   <div class="col-5">second</div>
@@ -92,7 +92,7 @@ The `row` container does not need to be a div, it can be anything.
 For example, the boxgrid system is particularly useful for forms:
 
 ```html
-<form class="row">
+<form class="row c12">
   <input type="text" class="col-6" name="firstName" placeholder="first name"/>
   <input type="text" class="col-6" name="lastName" placeholder="last name"/>
   <input type="text" class="col-9" name="street" placeholder="street"/>
@@ -130,7 +130,7 @@ But you can also change the gap value globally by adding this rule in your page 
 Every column can be a `row` by itself, so it's easy to nest grids within grids:
 
 ```html
-<div class="row">
+<div class="row c12">
   <div class="col-2">left</div>
   <div class="col-8 row c3"> <!-- nested -->
     <div>1</div>
