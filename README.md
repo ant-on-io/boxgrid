@@ -20,30 +20,33 @@ Copy [`boxgrid.css`](https://github.com/ant-on-io/boxgrid/blob/main/src/boxgrid.
 @import 'boxgrid.css';
 ```
 
-## Basic twelve-column grid
+## Basic automatic grid
 
 The base class for the grid system is `row`.
-Use `class="row"` for a twelve-column grid:
+Use `class="row"` for an automatic grid - one column for every child:
 
 ```html
-<div class="row">
+<div class="row"> <!-- 5 children = 5 equal columns -->
   <div>1</div>
   <div>2</div>
-  ...
-  <div>12</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
 </div>
 ```
-<img src="docs/svg/12-columns.svg" width="100%" alt="12-columns"/>
+<img src="docs/svg/automatic.svg" width="100%" alt="automatic"/>
 
-## Any number of columns, up to 16
+## Any fixed number of columns, up to 16
 
 Add `c2` class for two columns, `c3` for three columns, etc:
 
 ```html
-<div class="row c3">
-  <div>first column</div>
-  <div>second column</div>
-  <div>third column</div>
+<div class="row c3"> <!-- 3 columns -->
+  <div>first</div>
+  <div>second</div>
+  <div>third</div>
+  <div>fourth</div> <!-- 4th child starts a next row -->
+  <div>fifth</div>
 </div>
 ```
 <img src="docs/svg/3-columns.svg" width="100%" alt="3-columns"/>
@@ -82,17 +85,6 @@ If a column needs to start at a particular location, simply insert an empty div 
 </div>
 ```
 <img src="docs/svg/empty-space.svg" width="100%" alt="empty-space"/>
-
-## Automatic columns
-
-`class="row auto"` will arrange all children in equal columns:
-
-```html
-<div class="row auto"> <!-- two children, makes two columns -->
-  <div>one</div>
-  <div>two</div>
-</div>
-```
 
 ## Forms
 

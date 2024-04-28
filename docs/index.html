@@ -17,9 +17,9 @@
       <p>get it at <a href="https://github.com/ant-on-io/boxgrid">GitHub</a></p>
     </div>
 
-    <h2>Base grid: twelve columns</h2>
-    <p>Add <code>class="<b>row</b>"</code> to any element to turn it into a 12-column grid container:</p>
-    <div class="row">
+    <h2>Basic automatic grid</h2>
+    <p>Add <code>class="<b>row</b>"</code> to any element to turn it into a grid container:</p>
+    <div class="row"> <!-- 12 children = 12 columns -->
       <div>1</div>
       <div>2</div>
       <div>3</div>
@@ -36,7 +36,7 @@
     <details open>
       <summary>code</summary>
       <pre>
-&lt;div class="<b>row</b>">
+&lt;div class="<b>row</b>"> <i>&lt;!-- 12 children = 12 columns --></i>
   &lt;div>1&lt;/div>
   &lt;div>2&lt;/div>
   &lt;div>3&lt;/div>
@@ -51,25 +51,29 @@
       Or <code><b>c5</b></code> for five columns.
       Anything up to <code><b>c16</b></code>.
     </p>
+    <p>
+      You can add more children to the grid container, they will keep following the grid.
+    </p>
     <div class="row c3"> <!-- c3 = three columns -->
-      <div>first column</div>
-      <div>second column</div>
-      <div>third column</div>
+      <div>first</div>
+      <div>second</div>
+      <div>third</div>
+      <div>fourth</div> <!-- 4th child starts a new row -->
+      <div>fifth</div>
     </div>
     <details open>
       <summary>code</summary>
       <pre>
 &lt;div class="<b>row c3</b>"> <i>&lt;!-- c3 = three columns --></i>
-  &lt;div>first column&lt;/div>
-  &lt;div>second column&lt;/div>
-  &lt;div>third column&lt;/div>
+  &lt;div>first&lt;/div>
+  &lt;div>second&lt;/div>
+  &lt;div>third&lt;/div>
+  &lt;div>fourth&lt;/div> <i>&lt;!-- 4th child starts a new row --></i>
+  &lt;div>fifth&lt;/div>
 &lt;/div></pre>
     </details>
 
     <h2>Span columns</h2>
-    <p>
-      You can add more children to the grid container, they will keep following the grid.
-    </p>
     <p>
       To span more than one column, use <code><b>col-2</b></code> to <code><b>col-16</b></code>.
       For example <code>class="<b>col-2</b>"</code> for a two column span:
@@ -93,28 +97,9 @@
 &lt;/div></pre>
     </details>
 
-    <h2>Automatic columns</h2>
-    <p>Use <code>class="<b>row auto</b>"</code> to arrange all children in equal columns:</p>
-    <div class="row auto"> <!-- four children make four columns -->
-      <div>first</div>
-      <div>second</div>
-      <div>third</div>
-      <div>fourth</div>
-    </div>
-    <details open>
-      <summary>code</summary>
-      <pre>
-&lt;div class="<b>row auto</b>"> <i>&lt;!-- four children make four columns --></i>
-  &lt;div>first&lt;/div>
-  &lt;div>second&lt;/div>
-  &lt;div>third&lt;/div>
-  &lt;div>fourth&lt;/div>
-&lt;/div></pre>
-    </details>
-
     <h2>Empty spaces</h2>
     <p>If a column needs to start at a particular location, simply add an empty div of the desired column width:</p>
-    <div class="row">
+    <div class="row c12">
       <div class="col-4">four</div>
       <div class="col-8">eight</div>
       <div class="col-1">one</div>
@@ -127,7 +112,7 @@
     <details>
       <summary>code</summary>
       <pre>
-&lt;div class="<b>row</b>">
+&lt;div class="<b>row c12</b>">
   &lt;div class="<b>col-4</b>">four&lt;/div>
   &lt;div class="<b>col-8</b>">eight&lt;/div>
   &lt;div class="<b>col-1</b>">one&lt;/div>
@@ -144,7 +129,7 @@
       The container element does not need to be a div.
       You can add the row and col classes directly to a form and its inputs:
     </p>
-    <form class="row" onsubmit="return false">
+    <form class="row c12" onsubmit="return false">
       <input type="text" class="col-6" name="firstName" placeholder="first name"/>
       <input type="text" class="col-6" name="lastName" placeholder="last name"/>
       <input type="text" class="col-10" name="street" placeholder="street"/>
@@ -157,7 +142,7 @@
     <details>
       <summary>code</summary>
       <pre>
-&lt;form class="<b>row</b>">
+&lt;form class="<b>row c12</b>">
   &lt;input type="text" class="<b>col-6</b>" name="firstName" placeholder="first name"/>
   &lt;input type="text" class="<b>col-6</b>" name="lastName" placeholder="last name"/>
   &lt;input type="text" class="<b>col-10</b>" name="street" placeholder="street"/>
@@ -174,7 +159,7 @@
       The default gap is 0.25rem wide.
       For a different gap use <code><b>g0</b></code> (no gap) up to <code><b>g16</b></code> (4rem).
       Use <code>class="<b>g4</b>"</code> for a 1rem gap:</p>
-    <div class="row g4"> <!-- g4 = 1rem gap -->
+    <div class="row c12 g4"> <!-- g4 = 1rem gap -->
       <div class="col-5">1</div>
       <div class="col-3">2</div>
       <div class="col-4">3</div>
@@ -184,7 +169,7 @@
     <details>
       <summary>code</summary>
       <pre>
-&lt;div class="row <b>g4</b>"> <i>&lt;!-- g4 = 1rem gap --></i>
+&lt;div class="row c12 <b>g4</b>"> <i>&lt;!-- g4 = 1rem gap --></i>
   &lt;div class="col-5">1&lt;/div>
   &lt;div class="col-3">2&lt;/div>
   &lt;div class="col-4">3&lt;/div>
@@ -194,12 +179,12 @@
     </details>
 
     <h2>Nested grids</h2>
-    <div class="row">
+    <div class="row c12">
       <div class="col-2">left</div>
       <div class="col-8 row c3"> <!-- nested -->
         <div>1</div>
         <div>2</div>
-        <div class="row"> <!-- nested -->
+        <div class="row c12"> <!-- nested -->
           <div class="col-4">3.1</div>
           <div class="col-8">3.2</div>
         </div>
@@ -209,12 +194,12 @@
     <details>
       <summary>code</summary>
       <pre>
-&lt;div class="<b>row</b>">
+&lt;div class="<b>row c12</b>">
   &lt;div class="col-2">left&lt;/div>
   &lt;div class="<b>col-8 row c3</b>"> <i>&lt;!-- nested --></i>
     &lt;div>1&lt;/div>
     &lt;div>2&lt;/div>
-    &lt;div class="<b>row</b>"> <i>&lt;!-- nested --></i>
+    &lt;div class="<b>row c12</b>"> <i>&lt;!-- nested --></i>
       &lt;div class="col-4">3.1&lt;/div>
       &lt;div class="col-8">3.2&lt;/div>
     &lt;/div>

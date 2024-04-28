@@ -1,6 +1,6 @@
 .row {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* automatic */
   gap: 0.25rem;
   margin-bottom: 0.25rem;
 }
@@ -16,13 +16,11 @@
 .row.c9  { grid-template-columns: repeat(9,  1fr); }
 .row.c10 { grid-template-columns: repeat(10, 1fr); }
 .row.c11 { grid-template-columns: repeat(11, 1fr); }
-.row.c12 { grid-template-columns: repeat(12, 1fr); } /* default */
+.row.c12 { grid-template-columns: repeat(12, 1fr); }
 .row.c13 { grid-template-columns: repeat(13, 1fr); }
 .row.c14 { grid-template-columns: repeat(14, 1fr); }
 .row.c15 { grid-template-columns: repeat(15, 1fr); }
 .row.c16 { grid-template-columns: repeat(16, 1fr); }
-
-.row.auto { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
 
 .row.g0  { gap: 0;       margin-bottom: 0;       }
 .row.g1  { gap: 0.25rem; margin-bottom: 0.25rem; } /* default */
